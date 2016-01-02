@@ -1,4 +1,4 @@
-Simple map based on JS library leafletjs
+Simple map based on JS library leafletjs.
 The background image is an image (no WMS).
 Peculiarities of the map are:
 - use of animated SVG markers
