@@ -28,7 +28,7 @@ MapWithSvgMarkers.map = {
         , pictures: [{src: 'sample3.jpg'}]},
       {latLng: [394.3485384309523, 518.8262181725454], associatedImages: [0], title: "Berlin"
         , pictures: [{src: 'sample1.jpg'},
-          {src:  'sample1.jpg'}]},
+          {src: 'sample1.jpg'}]},
       {latLng: [302.15789144451963, 590.7105552500723], associatedImages: [0], title: "Tel Aviv"
         , pictures: [
           {src: 'sample1.jpg'},
@@ -62,7 +62,7 @@ MapWithSvgMarkers.map = {
 
     var content = '';
     $.each(markerAttr.pictures, function (index, el) {
-      content += '<div>' + '<img id="collaboration-image" src="img/thumbnails/' + 
+      content += '<div>' + '<img id="collaboration-image" src="img/thumbnails/' +
           el.src + '" alt="Thumbnail"   /></div>';
     });
     this.popup.setLatLng(markerAttr.latLng)
@@ -74,6 +74,7 @@ MapWithSvgMarkers.map = {
    */
   loadMap: function () {
     var _this = this;
+    var countForMouseMoviment = 0;
     if (this.map)
       return;
     this.isMapLoaded = true;
@@ -130,12 +131,17 @@ MapWithSvgMarkers.map = {
 
     this.map.on('mousemove', function (e) {
       if (!isMouseOver) {
+        if (countForMouseMoviment === 14) {
           var center = _this.map.getCenter();
           _this.map.panTo([((center.lat * 1.95) + (e.latlng.lat * 0.05)) / 2,
             ((center.lng * 1.85) + (e.latlng.lng * 0.15)) / 2], {animate: true, duration: 1.9});
-          
+        } else {
+          countForMouseMoviment++;
+        }
 
-      } 
+      } else {
+        countForMouseMoviment = 0;
+      }
     });
   }
 };
