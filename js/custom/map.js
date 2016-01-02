@@ -78,7 +78,6 @@ MapWithSvgMarkers.map = {
       return;
     this.isMapLoaded = true;
     var isMouseOver = false;
-    var countForMouseMoviment = 0;
     this.popup = L.popup({closeButton: false, maxWidth: 1000, className: 'map-popup', offset: [-90, 50]});
     this.map = L.map('map', {
       maxBounds: (new L.LatLngBounds([0, 0], [526, 1000])),
@@ -131,17 +130,12 @@ MapWithSvgMarkers.map = {
 
     this.map.on('mousemove', function (e) {
       if (!isMouseOver) {
-        //if (countForMouseMoviment === 14) {
           var center = _this.map.getCenter();
           _this.map.panTo([((center.lat * 1.95) + (e.latlng.lat * 0.05)) / 2,
             ((center.lng * 1.85) + (e.latlng.lng * 0.15)) / 2], {animate: true, duration: 1.9});
-          countForMouseMoviment = 0;
-//        } else {
-//          countForMouseMoviment++;
-//        }
-      } else {
-        countForMouseMoviment = 0;
-      }
+          
+
+      } 
     });
   }
 };
