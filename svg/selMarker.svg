@@ -1,0 +1,23 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="50px" height="50px" 
+     xml:space="preserve" class="logo">
+      <circle cx="25" cy="25" r="0" fill="rgb(255, 129, 129)" ><animate attributeName="r" attributeType="XML"
+                                                          begin="0s" dur="3s" fill="freeze" from="2" to="25" repeatCount="indefinite" /> 
+        <animate attributeName="opacity" attributeType="XML"
+                 begin="0s" dur="3s" fill="freeze" from="1" to="0" repeatCount="indefinite" /> 
+      </circle>
+  
+  		<circle cx="25" cy="25" r="0" fill="rgb(255, 129, 129)" ><animate attributeName="r" attributeType="XML"
+                                                                    begin="1s" dur="3s" fill="freeze" from="2" to="25" repeatCount="indefinite" /> 
+        <animate attributeName="opacity" attributeType="XML"
+                 begin="1s" dur="3s" fill="freeze" from="1" to="0" repeatCount="indefinite" /> 
+      </circle>
+  
+  	<circle cx="25" cy="25" r="0" fill="rgb(255, 129, 129)" ><animate attributeName="r" attributeType="XML"
+                                                            begin="2s" dur="3s" fill="freeze" from="2" to="25" repeatCount="indefinite" /> 
+        <animate attributeName="opacity" attributeType="XML"
+                 begin="2s" dur="3s" fill="freeze" from="1" to="0" repeatCount="indefinite" /> 
+      </circle>
+    	
+ 
+</svg>

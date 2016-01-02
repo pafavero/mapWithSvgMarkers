@@ -1,0 +1,50 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    color: #666666;
+}
+.tooltip{
+    padding-top: 8px;
+    font-size: 5px;
+}
+div#map { 
+    height: 500px;
+    width:  800px;
+    background-color: white;
+    cursor: crosshair;
+}
+.svg_marker  {
+    cursor:pointer;
+    width:  50px;
+    height: 50px;
+    background-size:50px 50px;
+    background-image: url('../../svg/marker.svg');
+}
+.svg_selMarker  {
+    cursor:pointer;
+    width:  50px;
+    height: 50px;
+    background-size:50px 50px;
+    background-image: url('../../svg/selMarker.svg');
+}
+
+
+/* popup ***********************************************************************/
+div.leaflet-popup-content{
+    margin: 4px 3px 0px 4px !important;
+}
+div.leaflet-popup-content img#collaboration-image{
+    width: 70px;
+}
+div.leaflet-popup-tip-container{
+    visibility: hidden;
+}
+
+div.leaflet-popup-content-wrapper{
+    border-radius: initial !important;
+}
