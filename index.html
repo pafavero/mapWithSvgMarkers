@@ -8,7 +8,7 @@
         <script type="text/javascript" src="js/lib/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="js/lib/leaflet-0.7.3.js"></script>
         <script type="text/javascript" >
-            
+
             // initialization 
             $(function () {
               MapWithSvgMarkers.map.loadMap();
@@ -19,5 +19,16 @@
     </head>
     <body>
         <div id="map"></div>
+        <div>
+            Simple map based on JS library leafletjs.
+            The background image is an only an image (no WMS).
+            Peculiarities of the map are:
+            <ul>
+                <li>use of animated SVG markers</li>
+                <li>map drag will be automatically perfomed related to the mouse moviment</li>
+                <li>no possible to zoom or drag using mouse wheel or left mouse button</li>
+            </ul>
+
+        </div>
     </body>
 </html>
